@@ -38,16 +38,13 @@ bash dreno.sh medir --nome syncthing --iniciar "syncthing --no-browser" --parar 
 
 Sem comando, use `--manual` e o script pede para você iniciar e parar o serviço na hora certa. Nesse modo a tela fica acesa nas transições, então compare só com medições feitas do mesmo jeito.
 
-Outras opções
-
-- `--minutos N` muda o tempo de cada fase. O padrão é 5, e o teste completo leva o triplo.
-- `--capacidade MAH` informa a capacidade da bateria quando o aparelho não informa sozinho.
+O `--minutos N` muda o tempo de cada fase. O padrão é 5, e o teste completo leva o triplo. O `--capacidade MAH` informa a capacidade da bateria quando o aparelho não informa sozinho.
 
 Cada medição fica salva em `medicoes/`, e `bash dreno.sh analisar ARQUIVO` refaz a análise de um arquivo salvo.
 
 ## O que ele lê
 
-Corrente, tensão, temperatura, porcentagem, carga restante e se o aparelho está na tomada, tudo pelo termux-battery-status. Lê também o modelo e o SoC, para a tabela.
+Corrente, tensão, temperatura, porcentagem, carga restante e se o aparelho está na tomada, tudo pelo `termux-battery-status`. Lê também o modelo e o SoC, para a tabela.
 
 ## O que ele não faz
 
